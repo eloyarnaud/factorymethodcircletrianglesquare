@@ -1,10 +1,17 @@
-package dataadapter;
+package design.adapter;
 
 public class Main {
 
-	String myDate = "20121206";
+      public static void main(String[] args) {
+            System.out.println("Criando desenho...");
+            Drawing drawing = new Drawing();
+            drawing.addShape(new Rectangle());
+            drawing.addShape(new Circle());
+            System.out.println("Desenhando...");
+            drawing.draw();
+            System.out.println("Redimensionando...");
+            drawing.resize();
 
-	Calendar cal = Calendar.getInstance();
-	SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-	cal.setTime(sdf.parse(myDate));
+      }
+
 }
